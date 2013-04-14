@@ -1,6 +1,6 @@
 Title: Introduction to Using Profiling Tools
 Date: 2013-02-26
-Tags: performance, profiling
+Tags: profiling
 Summary: In this article, you will see several performance tools used to identify bottlenecks in a simple program.
 
 ## Performance tools ##

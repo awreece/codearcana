@@ -1,6 +1,8 @@
 Title: Pai Mei on Mac OSX 10.8
 Date: 2012-10-28
-Summary: <a href="https://github.com/OpenRCE/paimei">Pai Mei</a> is an open source windows reverse engineering framework. At one point, it was ported to Mac OSX but the project is not very actively maintained and the current instructions are quite lacking. This post hopes to offer some guidance and reduce some of the frustration involved in installing Pai Mei on Mac OSX.
+Tags: mac osx, reverse engineering
+
+<a href="https://github.com/OpenRCE/paimei">Pai Mei</a> is an open source windows reverse engineering framework. At one point, it was ported to Mac OSX but the project is not very actively maintained and the current instructions are quite lacking. This post hopes to offer some guidance and reduce some of the frustration involved in installing Pai Mei on Mac OSX.
 
 <h3>Getting the libraries</h3>
 The most difficult thing was finding how to get all the packages working. First and foremost, Pai Mei was designed for a 32 bit windows libary so some trickery is required to get it to work in 64 bit mode (which is necessary, because I could not get the latest <tt>wxPython</tt> from Homebrew to work in 32 bit mode). I did not realize at first that there was a way to use Pai Mei in 64 bit mode, so I spent a long time attempting to find universal binaries for wxPython and MySql.

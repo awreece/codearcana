@@ -1,6 +1,7 @@
 Title: Analysis of a Parallel Memory Allocator
 Date: 2012-05-11
 Summary: I implemented and tested different configurations of a modern parallel memory allocator.
+Tags: malloc
 
 # Background #
 ## Problem ##

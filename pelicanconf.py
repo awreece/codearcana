@@ -3,9 +3,11 @@
 
 AUTHOR = u'Alex Reece'
 SITENAME = u'Code Arcana'
-SITEURL = 'http://www.codearcana.com'
+SITEURL = 'http://codearcana.com'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'America/Los_Angeles'
+
+TYPOGRIFY = True
 
 DEFAULT_LANG = u'en'
 
@@ -21,6 +23,11 @@ SOCIAL = (
     ('twitter', 'https://twitter.com/awreece'),
     ('github', 'https://github.com/awreece'),
     ('google+', 'https://plus.google.com/106589059588263736517/posts'),
+)
+
+MENUITEMS = (
+    ('Blog', SITEURL),
+    ('About Me', SITEURL),
 )
 
 GITHUB_URL = 'https://github.com/awreece'
