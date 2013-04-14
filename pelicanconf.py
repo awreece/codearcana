@@ -26,4 +26,9 @@ SOCIAL = (
 GITHUB_URL = 'https://github.com/awreece'
 TWITTER_USERNAME = 'awreece'
 
+FILES_TO_COPY = (
+  ('../extras/CNAME', 'CNAME'),
+  ('../extras/README.md', 'README.md'),
+)
+
 DEFAULT_PAGINATION = 10
