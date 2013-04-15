@@ -9,6 +9,8 @@ TIMEZONE = 'America/Los_Angeles'
 
 TYPOGRIFY = True
 
+THEME = './theme'
+
 DEFAULT_LANG = u'en'
 
 # Blogroll
@@ -30,7 +32,7 @@ MENUITEMS = (
     ('About Me', SITEURL),
 )
 
-GITHUB_URL = 'https://github.com/awreece'
+# GITHUB_URL = 'https://github.com/awreece'
 TWITTER_USERNAME = 'awreece'
 
 FILES_TO_COPY = (

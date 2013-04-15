@@ -1,0 +1,3 @@
+[submodule "theme"]
+	path = theme
+	url = git@github.com:awreece/pelican-ca-theme.git
