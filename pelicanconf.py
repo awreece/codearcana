@@ -7,8 +7,6 @@ SITEURL = 'http://codearcana.com'
 
 TIMEZONE = 'America/Los_Angeles'
 
-TYPOGRIFY = True
-
 THEME = './theme'
 
 DEFAULT_LANG = u'en'
