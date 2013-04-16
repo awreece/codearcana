@@ -29,8 +29,12 @@ SOCIAL = (
 
 MENUITEMS = (
     ('Blog', SITEURL),
-    ('About Me', SITEURL),
+    ('About', SITEURL + "/about.html"),
 )
+
+TEMPLATE_PAGES = {
+  'template_pages/about.html': 'about.html'
+}
 
 # GITHUB_URL = 'https://github.com/awreece'
 TWITTER_USERNAME = 'awreece'
