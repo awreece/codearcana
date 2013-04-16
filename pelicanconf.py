@@ -43,4 +43,11 @@ FILES_TO_COPY = (
   ('../extras/README.md', 'README.md'),
 )
 
+YEAR_ARCHIVE_SAVE_AS =  'posts/{date:%Y}/index.html'
+MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'
+ARTICLE_URL =           'posts/{date:%Y}/{date:%m}/{slug}.html'
+ARTICLE_SAVE_AS =       'posts/{date:%Y}/{date:%m}/{slug}.html'
+ARTICLE_LANG_URL =      'posts/{date:%Y}/{date:%m}/{slug}-{lang}.html'
+ARTICLE_LANG_SAVE_AS =  'posts/{date:%Y}/{date:%m}/{slug}-{lang}.html'
+
 DEFAULT_PAGINATION = 10
