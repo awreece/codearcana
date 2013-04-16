@@ -18,6 +18,10 @@ LINKS =  (
    ('PPP Blog', 'http://ppp.cylab.cmu.edu/wordpress/'),
    ('Coding Horror', 'http://www.codinghorror.com/blog/'),
    ('Embedded in Academia', 'http://blog.regehr.org/'),
+   ('High Scalability', 'http://highscalability.com/'),
+   ('Coder Weekly', 'http://coderweekly.com/'),
+   ('phrack', 'http://www.phrack.org/'),
+   ("skier_'s blog", 'http://jbremer.org/'),
 )
 
 # Social widget
