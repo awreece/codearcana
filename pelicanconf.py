@@ -33,6 +33,7 @@ SOCIAL = (
 
 MENUITEMS = (
     ('Blog', SITEURL),
+    ('Archives', SITEURL + "/archives.html"),
 )
 
 # GITHUB_URL = 'https://github.com/awreece'
