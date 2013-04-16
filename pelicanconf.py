@@ -13,6 +13,8 @@ THEME = './theme'
 
 DEFAULT_LANG = u'en'
 
+TAG_CLOUD_MAX_ITEMS = 10
+
 # Blogroll
 LINKS =  (
    ('PPP Blog', 'http://ppp.cylab.cmu.edu/wordpress/'),
