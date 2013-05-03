@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 ~~~
 
 Since `printf` has a variable number of arguments, it must use the format string to determine the number of arguments.
-In the case above, the attacker can pass the string `"%p %p %p %p %p %p %p %p %p %p %p %p %p %p %p"` and fool the `printf` into thinking it has 5
+In the case above, the attacker can pass the string `"%p %p %p %p %p %p %p %p %p %p %p %p %p %p %p"` and fool the `printf` into thinking it has 15
 arguments. It will naively print the next 15 addresses on the stack, thinking they are its arguments:
 
 ~~~
