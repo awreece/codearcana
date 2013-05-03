@@ -257,3 +257,24 @@ sh;#..<garbage>..sh-4.2$
 ~~~
 
 Woo hoo, we got our shell!
+
+# Debugging an exploit #
+
+Sometimes, things don't go as planned and we don't get a shell. If this happens, `gdb` is your friend. 
+The two most helpful things to do are to break before the call to `printf` and make sure the stack is what you 
+expect (if you expect to use `%10$hn`, make sure the value you control is the 10th argument after the format
+string),
+and then break right after the call to `printf` and make sure the value you expect is at the target address.
+
+~~~
+:::console
+(gdb) x/2i $pc
+=> 0x80484ae <main+74>:	call   0x8048360 <printf@plt>
+   0x80484b3 <main+79>:	mov    $0x0,%eax
+(gdb) x/11a $esp
+0xffffdb70:	0xffffdb98	0xffffdddf	0x64	0xf7ec1289
+0xffffdb80:	0xffffdbbf	0xffffdbbe	0x0	0xffffdca4
+0xffffdb90:	0xffffdc44	0x0	0x41414141
+(gdb) x/a $esp+40
+0xffffdb98:	0x41414141
+~~~
