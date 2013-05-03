@@ -25,6 +25,6 @@ allowFullScreen></iframe>
 <iframe src="http://player.vimeo.com/video/65014452" width="500" height="375"
 frameborder="0" webkitAllowFullScreen mozallowfullscreen
 allowFullScreen></iframe>
-[slides](https://dl.dropboxusercontent.com/u/15197322/easy_format.pdf)
+[slides](https://dl.dropboxusercontent.com/u/15197322/easy_format.pdf) [tutorial](|filename|/security/format_string_tutorial.md)
 
 
