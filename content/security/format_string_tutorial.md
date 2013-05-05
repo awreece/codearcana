@@ -303,13 +303,18 @@ If that works, then break right after the call to `printf` and make sure the val
 
 ~~~
 :::console
+Breakpoint 1, 0x080484ae in main ()
 (gdb) x/2i $pc
 => 0x80484ae <main+74>:	call   0x8048360 <printf@plt>
    0x80484b3 <main+79>:	mov    $0x0,%eax
+(gdb) x/a $esp
+0xffffdb70:	0xffffdb98
+(gdb) x/s 0xffffdb98
+0xffffdb98:	 "AAAA%10$p"
 (gdb) x/11a $esp
-0xffffdb70:	0xffffdb98	0xffffdddf	0x64	0xf7ec1289
+0xffffdb70:	0xffffdb98	0xffffdddd	0x64	0xf7ec1289
 0xffffdb80:	0xffffdbbf	0xffffdbbe	0x0	0xffffdca4
 0xffffdb90:	0xffffdc44	0x0	0x41414141
-(gdb) x/a $esp+40
+(gdb) x/a $esp + 40
 0xffffdb98:	0x41414141
 ~~~
