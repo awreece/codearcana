@@ -288,7 +288,11 @@ execute our payload with the same environment so we can test our exploit in
 
 ~~~
 :::console
-$ env -i PWD=$(pwd) SHLVL=0 ./a.out "$(python -c 'print "my_exploit_string"')"
+$ env -i PWD=$(pwd) SHLVL=0 ./a.out "$(python -c 'print "my_exploit_string"')" # Outside gdb.
+$ gdb ./a.out # Inside gdb.
+(gdb) unset env
+Delete all environment variables? (y or n) y
+(gdb) r "$(/usr/bin/python -c 'print "my_exploit_string"')"
 ~~~
 
 The most helpful thing to do in `gdb` is to break just before the call to
