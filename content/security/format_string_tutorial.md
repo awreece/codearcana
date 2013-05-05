@@ -260,11 +260,42 @@ Woo hoo, we got our shell!
 
 # Debugging an exploit #
 
-Sometimes, things don't go as planned and we don't get a shell. If this happens, `gdb` is your friend. 
-The two most helpful things to do are to break before the call to `printf` and make sure the stack is what you 
+Sometimes, things don't go as planned and we don't get a shell. If this
+happens, `gdb` is your friend. Unfortunately, `gdb` isn't a very good friend.
+It helpfully puts stuff in your environment, so any careful calculations you
+were doing related to the stack may no longer be valid. In order to resolve
+this, you need to make sure your environment looks like the environment used 
+by `gdb`. We
+first see what the stack looks like under `gdb` and then always run our exploit
+with that environment:
+
+~~~
+:::console
+$ env -i /usr/bin/printenv
+$ gdb -q /usr/bin/printenv
+Reading symbols from /usr/bin/printenv...(no debugging symbols found)...done.
+(gdb) unset env
+Delete all environment variables? (y or n) y
+(gdb) r
+Starting program: /usr/bin/printenv 
+PWD=/home/ppp
+SHLVL=0
+~~~
+
+Now that we know the environment used by `gdb`, we can make sure to always 
+execute our payload with the same environment so we can test our exploit in
+`gdb`:
+
+~~~
+:::console
+$ env -i PWD=$(pwd) SHLVL=0 ./a.out "$(python -c 'print "my_exploit_string"')"
+~~~
+
+The most helpful thing to do in `gdb` is to break just before the call to
+`printf` and make sure the argument and the stack stack is what you 
 expect (if you expect to use `%10$hn`, make sure the value you control is the 10th argument after the format
-string),
-and then break right after the call to `printf` and make sure the value you expect is at the target address.
+string).
+If that works, then break right after the call to `printf` and make sure the value you expect is at the target address.
 
 ~~~
 :::console
