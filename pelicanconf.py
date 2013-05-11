@@ -42,6 +42,8 @@ TWITTER_USERNAME = 'awreece'
 FILES_TO_COPY = (
   ('../extras/CNAME', 'CNAME'),
   ('../extras/README.md', 'README.md'),
+  ('../images/omp_get_num_procs.png', 'images/omp_get_num_procs.png')
+  # TODO(awreece) Use STATIC_PATHS.
 )
 
 YEAR_ARCHIVE_SAVE_AS =  'posts/{date:%Y}/index.html'
