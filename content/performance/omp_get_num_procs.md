@@ -1,4 +1,4 @@
-Title: Why is <code>omp_get_num_procs</code> so bad?
+Title: Why is <code>omp_get_num_procs</code> so slow?
 Date: 2013-05-10
 Tags: profiling
 Summary: Some students had some difficulty profiling their code because <code>omp_get_num_procs</code> was dominating the profiling traces. I tracked it down and found that the profiling tools emitted misleading results when the library didn't have symbols.
