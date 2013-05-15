@@ -8,8 +8,8 @@ This is the personal blog of Alex Reece.  Some quick facts about me:
     be living in San Francisco shortly after I graduate.
 -   My [resume](https://github.com/awreece/resume) is on Github (no pdf version
     there for now).
--   `vim` is my editor, `git` is my DVCS, and I know more `make` than anybody
-    should.
+-   `vim` is my editor, `git` is my DVCS, and I know more `make` than is
+    comfortable.
 
 I started this blog because I find the process of summarizing and explaining
 the interesting things I've done very rewarding. The idea is to update as much as
