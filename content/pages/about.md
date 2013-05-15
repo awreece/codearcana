@@ -14,6 +14,8 @@ This is the personal blog of Alex Reece.  Some quick facts about me:
 I started this blog because I find the process of summarizing and explaining
 the interesting things I've done very rewarding. The idea is to update as much as
 a once or twice a week with a brief post about something interesting I've done
-or learned.
+or learned. The target audience will vary, but generally the posts will be
+readable by someone who is familiar with programming and exposed to some
+systems topics.
 Expect to see semi-regular thoughts on software engineering, computer systems, 
 security, and more.
