@@ -36,7 +36,11 @@ clock_gettime(CLOCK_MONOTONIC, &after);
 ~~~
 # Other platforms #
 
-Unfortunately, this doesn't work everywhere! Each platform has its own way accessing a high resolution monotonic counter. On Mac OS X we use [`mach_absolute_time`](https://developer.apple.com/library/mac/#qa/qa1398/_index.html) and on Windows we use `QueryPerformanceCounter`. 
+Unfortunately, this doesn't work everywhere! Each platform has its own way
+accessing a high resolution monotonic counter. On Mac OS X we use
+[`mach_absolute_time`](https://developer.apple.com/library/mac/#qa/qa1398/_index.html)
+and on Windows we use
+[`QueryPerformanceCounter`](http://msdn.microsoft.com/en-us/library/windows/desktop/ms644904(v=vs.85).aspx). 
 
 ## `rdtsc` ##
 On x86 machines where none of these are available, we can resort directly to `rdtsc`. This is a special instruction that returns the [Time Stamp Counter](https://en.wikipedia.org/wiki/Time_Stamp_Counter), the number of cycles since reset. Unfortunately, we have to be *very* careful when using this instruction. [This white paper](http://download.intel.com/embedded/software/IA/324264.pdf) offers a lot of good advice on how to use it, but in short we have to take care to prevent instruction reordering. In the following code, the reordering of the `fdiv` after the `rdtsc` would lead to inaccurate timing results:
