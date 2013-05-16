@@ -19,3 +19,5 @@ readable by someone who is familiar with programming and exposed to some
 systems topics.
 Expect to see semi-regular thoughts on software engineering, computer systems, 
 security, and more.
+
+If you want to contact me, my email address is awre<a href="http://www.google.com/recaptcha/mailhide/d?k=01U7tYw_J5_VO8Fey3IR-muQ==&amp;c=90p4dbfA1bNd15zEsvIiYQ0feCM8U9M8DZzpPcP6dc0=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501U7tYw_J5_VO8Fey3IR-muQ\75\75\46c\7590p4dbfA1bNd15zEsvIiYQ0feCM8U9M8DZzpPcP6dc0\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">...</a>@gmail.com
