@@ -1,4 +1,4 @@
-Title: A C cross-platform monotonic timer
+Title: A cross-platform monotonic timer
 Date: 2013-05-15
 Tags: profiling
 
