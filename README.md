@@ -3,7 +3,8 @@ codearcana
 
 My personal blog!
 
-Unless otherwise specified, all content in `content/` is my property. 
+Unless otherwise specified, all content in `content/` is my
+intellectual property. 
 Feel free to share links to my articles, etc, but please do not try to pawn
 it as your own work.
 
