@@ -10,6 +10,8 @@ platform has a different way of doing it.
 
 # The problem #
 
+I was trying to determine the run time of a function and wanted the most
+precise and accurate information possible.
 First, I started by using `gettimeofday`:
 
 ~~~
