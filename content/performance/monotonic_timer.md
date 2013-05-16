@@ -1,6 +1,7 @@
 Title: A cross-platform monotonic timer
 Date: 2013-05-15
 Tags: profiling
+Summary: I've been working on writing a memory bandwidth benchmark for a while and needed to use a monotonic timer to compute accurate timings. I have since learned that this is more challenging to do that I initially expected and each platform has a different way of doing it.
 
 I've been working on writing a memory bandwidth benchmark for a while and
 needed to use a monotonic timer to compute accurate timings. I have since
