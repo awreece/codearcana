@@ -22,6 +22,7 @@ LINKS =  (
    ('Coder Weekly', 'http://coderweekly.com/'),
    ('phrack', 'http://www.phrack.org/'),
    ("skier_'s blog", 'http://jbremer.org/'),
+   ("dtrace blog", "http://dtrace.org/blogs"),
 )
 
 # Social widget
