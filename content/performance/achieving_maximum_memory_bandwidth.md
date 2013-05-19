@@ -189,10 +189,10 @@ When I run, I get very reasonable output (remember, the goal is 23.8 GiB/s):
 ~~~
 :::console
 $ OMP_NUM_THREADS=4 ./memory_profiler  # I only have 4 physical cores.
-      write_memory_rep_stosq_omp: 21.25 GiB/s
-            write_memory_avx_omp:  9.70 GiB/s
-write_memory_nontemporal_avx_omp: 22.13 GiB/s
-         write_memory_memset_omp: 22.14 GiB/s
+            write_memory_avx_omp:  9.68 GiB/s
+write_memory_nontemporal_avx_omp: 22.15 GiB/s
+         write_memory_memset_omp: 22.15 GiB/s
+      write_memory_rep_stosq_omp: 21.24 GiB/s
 ~~~
 
 # Final thoughts #
