@@ -42,7 +42,8 @@ TWITTER_USERNAME = 'awreece'
 FILES_TO_COPY = (
   ('../extras/CNAME', 'CNAME'),
   ('../extras/README.md', 'README.md'),
-  ('../images/omp_get_num_procs.png', 'images/omp_get_num_procs.png')
+  ('../images/omp_get_num_procs.png', 'images/omp_get_num_procs.png'),
+  ('../images/cache_readwrite.png', 'images/cache_readwrite.png')
   # TODO(awreece) Use STATIC_PATHS.
 )
 

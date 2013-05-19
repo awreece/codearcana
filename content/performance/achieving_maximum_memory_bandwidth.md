@@ -102,7 +102,7 @@ The answer is a bit complicated because the cache in a modern processor is [comp
 
 # Non-temporal instructions #
 
-So how do I solve this problem? The answer lies in a little known feature: non-temporal instructions. As described in Ulrich Drepper's 100 pages [*What every programmer should know about memory*](http://www.akkadia.org/drepper/cpumemory.pdf),
+So how do I solve this problem? The answer lies in a little known feature: non-temporal instructions. As described in Ulrich Drepper's 100 page [*What every programmer should know about memory*](http://www.akkadia.org/drepper/cpumemory.pdf),
 
 > These non-temporal write operations do not read a cache line and then modify it; instead, the new content is directly written to memory. This might sound expensive but it does not have to be. The processor will try to use write-combining (see section 3.3.3) to ﬁll entire cache lines. If this succeeds no memory read operation is needed at all.
 
