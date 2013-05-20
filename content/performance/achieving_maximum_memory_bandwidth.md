@@ -139,9 +139,9 @@ and see that while I am far from the theoretical bandwidth, I'm at least on the 
 
 # Repeated string instructions #
 
-At this point, I got some advice: Dillon Sharlet had a key suggestion here to use the repeated string instructions. The [`rep`](http://web.itu.edu.tr/kesgin/mul06/intel/instr/rep.html) instruction prefix repeats a special string instruction. For exaple, `rep stosq` will repeatedly store a word into an array - exactly what I want. For relatively recent processors[^7], this works well. After looking up the hideous syntax for inline assembly[^8], I get our function:
+At this point, I got some advice: Dillon Sharlet had a key suggestion here to use the repeated string instructions. The [`rep`](http://web.itu.edu.tr/kesgin/mul06/intel/instr/rep.html) instruction prefix repeats a special string instruction. For example, `rep stosq` will repeatedly store a word into an array - exactly what I want. For relatively recent processors[^7], this works well. After looking up the hideous syntax for inline assembly[^8], I get our function:
 
-[^7]: Apparently, this wasn't always the case: <http://stackoverflow.com/a/8429084/447288>
+[^7]: Apparently, this wasn't always the case: <http://stackoverflow.com/a/8429084/447288>. In addition, my benchmarking seems to indicate that neither `rep lodsq` or `rep scansq` benefit from the same degree of optimization that `rep stosq` received. I don't fully understand what all is going on.
 
 [^8]: The inline assembly wasn't strictly necessary here (I could have and should have written it directly in an assembly file), but I've had difficulties exporting function names in assembly portably.
 
@@ -203,4 +203,6 @@ I still have some unanswered questions (I will happily buy a beer for anyone who
 
 -   Why doesn't `write_memory_avx_omp`, the function that uses AVX to store (but doesn't use non-temporal instructions) use half the bandwidth?
 -   Why doesn't the use of non-temporal instructions double bandwidth for the single core programs? It only went up 50%.
--   Why aren't the AVX instructions on one core able to saturate the bandwidth?
+-   Why aren't the AVX instructions on one core able to saturate the bandwidth ?
+-   Why don't AVX instructions get roughly double the bandwidth of the SSE instructions?
+-   Why doesn't `rep scansq` or `rep lodsq` get the same bandwidth as `rep stosq`?
