@@ -1,7 +1,9 @@
-Title: Introduction to Format String Exploits
+Title: Introduction to format string exploits
 Date: 2013-05-02
 Tags: exploitation, tutorial
 Summary: A brief introduction to format string exploits. 
+
+It would be helpful to be familiar with the x86 calling conventions before reading this tutorial. I prepared a brief primer [here](|filename|/security/x86_calling.md) and you are encouraged to learn more on your own.
 
 # How do format strings vulnerabilities work? #
 
