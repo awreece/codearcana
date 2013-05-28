@@ -21,7 +21,9 @@ the correct libraries, you can compile 32 bit code on a 64 bit machine with the
 slightly more technically challenging. For the purpose of this tutorial, I will
 assume that you are familiar with x86 C calling conventions and stack
 management. I will attempt to provide a brief explanation
-[here](|filename|/security/x86_calling.md), but you are encouraged to explore in more depth on your own.
+[here](|filename|/security/x86_calling.md), but you are encouraged to explore
+in more depth on your own. Lastly, you should be familiar with a unix command
+line interface.
 
 # My first ROP #
 
