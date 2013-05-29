@@ -244,15 +244,15 @@ These work by `pop`ing values from the stack (which we control) into registers a
 
 ~~~
 :::text
-| <address of mov %eax, (%ecx)>                  |
-| <value to write>                               |
-| <address to write to>                          |
-| <address of pop %ecx; pop %edx; pop %eax; ret> |
+| <address of mov %eax, (%ecx)>        |
+| <value to write>                     |
+| <address to write to>                |
+| <address of pop %ecx; pop %eax; ret> |
 ~~~
 
 You'll see that the first gadget returns to the second gadget, continuing the chain of attacker controlled code execution (this next gadget can continue).
 
-Other useful gadgets include `xchg %eax, %esp`, `sub %eax,%esp`, and `add    $0x1c,%esp`, which can be used to modify the stack pointer and _pivot_ it to a attacker controlled buffer. This is useful if the original vulnerability only gave control over `%eip` (like in a [format string vulnerability](|filename|/security/format_string_tutorial.md)) or if the attacker does not control very much of the stack (as would be the case for a short buffer overflow).
+Other useful gadgets include `xchg %eax, %esp` and `add $0x1c,%esp`, which can be used to modify the stack pointer and _pivot_ it to a attacker controlled buffer. This is useful if the original vulnerability only gave control over `%eip` (like in a [format string vulnerability](|filename|/security/format_string_tutorial.md)) or if the attacker does not control very much of the stack (as would be the case for a short buffer overflow).
 
 # Chaining functions #
 
