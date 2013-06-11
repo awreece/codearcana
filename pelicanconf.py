@@ -44,7 +44,9 @@ FILES_TO_COPY = (
   ('../extras/CNAME', 'CNAME'),
   ('../extras/README.md', 'README.md'),
   ('../images/omp_get_num_procs.png', 'images/omp_get_num_procs.png'),
-  ('../images/cache_readwrite.png', 'images/cache_readwrite.png')
+  ('../images/cache_readwrite.png', 'images/cache_readwrite.png'),
+  ('../images/zsh_theme.png', 'images/zsh_theme.png'),
+  ('../images/zsh_theme_popup.png', 'images/zsh_theme_popup.png')
   # TODO(awreece) Use STATIC_PATHS.
 )
 
