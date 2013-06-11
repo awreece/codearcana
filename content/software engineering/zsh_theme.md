@@ -2,7 +2,9 @@ Title: My <tt>zsh</tt> theme
 Date: 2013-11-06
 Tags: zsh
 
-I spent some time this week switching from `bash` to `zsh`
+I spent some time this week switching from `bash` to `zsh` (I really enjoy
+`zsh` - I treat it as `bash` with floating point arithmetic and other
+niceities)
 and making a theme for
 [`oh-my-zsh`](https://github.com/robbyrussell/oh-my-zsh) 
 for myself. I'm not quite done, but I am pretty pleased with
@@ -18,6 +20,11 @@ And a step by step explanation:
 -     If the path to the current directory is long, it is also displayed in the right hand side.
 -     The user and hostname are displayed (only) if logged in over `ssh`.
 -     Since this is `zsh`, the right hand prompt disappears if the line is long enough.
+
+You'll note that I *don't* have `git` directory status in the prompt, since I
+don't think they are worth it. I like my prompt to be as simple as possible
+unless it is necessary, which is why everything in my theme is in the right
+hand prompt.
 
 The best part? On Mac OSX, I get notifications if a program completes and the terminal doesn't have focus:
 
