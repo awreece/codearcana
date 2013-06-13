@@ -31,4 +31,4 @@ And some more detailed explanation:
 -     The user and hostname are displayed (only) if logged in over `ssh`.
 -     Since this is `zsh`, the right hand prompt disappears if the line is long enough.
 
-Source is in [my fork of `oh-my-zsh`](https://github.com/awreece/oh-my-zsh/blob/master/themes/awreece.zsh-theme) and [my fork of `prezto`](https://github.com/awreece/prezto/blob/theme/modules/prompt/functions/prompt_awreece_setup.)
+Source is in [my fork of `oh-my-zsh`](https://github.com/awreece/oh-my-zsh/blob/master/themes/awreece.zsh-theme) and [my fork of `prezto`](https://github.com/awreece/prezto/blob/theme/modules/prompt/functions/prompt_awreece_setup).
