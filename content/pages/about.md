@@ -4,11 +4,10 @@ This is the personal blog of Alex Reece.  Some quick facts about me:
 
 -   I am a member of the [Plaid Parliament of Pwning (PPP)](http://pwning.net),
     a computer security research group and CTF team from CMU. 
--   I will be starting work at [Delphix](http://www.delphix.com/) and will
-    be living in San Francisco shortly after I graduate.
+-   I work at [Delphix](http://www.delphix.com/) in San Francisco.
 -   My [resume](https://github.com/awreece/resume) is on Github (no pdf version
     there for now).
--   `vim` is my editor, `git` is my DVCS, and I know more `make` than is
+-   `vim` is my editor, `git` is my DVCS, `zsh` is my shell, and I know more `make` than is
     comfortable.
 
 I started this blog because I find the process of summarizing and explaining
