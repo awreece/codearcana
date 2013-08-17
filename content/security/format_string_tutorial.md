@@ -200,7 +200,7 @@ $ objdump -d a.out
 ... <snip> ...
 ~~~
 
-Now we know where to write. We want to the address of `system` to the `strdup` got entry, `0x804a004`. 
+Now we know where to write. We want to write the address of `system` to the `strdup` got entry, `0x804a004`. 
 For now, we plug in our address into the payload and make sure everything still works out:
 
 ~~~
