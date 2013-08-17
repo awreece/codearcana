@@ -144,7 +144,7 @@ int main(int argc, char** argv) {
 }
 ~~~
 
-Over plan is going to be to overwrite the GOT entry of `strdup` with the address of `system`, so the program
+Our plan is going to be to overwrite the GOT entry of `strdup` with the address of `system`, so the program
 will `printf(argv[1])` then `system(argv[1])`. Hence, our payload must be a valid argument to `system` - we will
 start our payload with `sh;#` (which will be `sh` and cause the rest of the payload to be a comment. 
 This also has the advantage of being exactly 4 bytes long, which isn't important for this example 
