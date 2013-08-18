@@ -40,16 +40,16 @@ MENUITEMS = (
 # GITHUB_URL = 'https://github.com/awreece'
 TWITTER_USERNAME = 'awreece'
 
-FILES_TO_COPY = (
-  ('../extras/CNAME', 'CNAME'),
-  ('../extras/README.md', 'README.md'),
-  ('../images/omp_get_num_procs.png', 'images/omp_get_num_procs.png'),
-  ('../images/cache_readwrite.png', 'images/cache_readwrite.png'),
-  ('../images/zsh_theme.png', 'images/zsh_theme.png'),
-  ('../images/zsh_theme_popup.png', 'images/zsh_theme_popup.png'),
-  ('../images/bash_perf_stack_trace.png', 'images/bash_perf_stack_trace.png'),
-  # TODO(awreece) Use STATIC_PATHS.
-)
+STATIC_PATHS = [
+    'images',
+    '../extras/CNAME',
+    '../extras/README.md',
+]
+
+EXTRA_PATH_METADATA = {
+    '../extras/CNAME': {'path': 'CNAME'},
+    '../extras/README.md': {'path': 'README.md'}
+}
 
 YEAR_ARCHIVE_SAVE_AS =  'posts/{date:%Y}/index.html'
 MONTH_ARCHIVE_SAVE_AS = 'posts/{date:%Y}/{date:%m}/index.html'

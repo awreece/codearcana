@@ -96,7 +96,7 @@ Why was I consistently getting slightly under half the theoretical memory bandwi
 
 The answer is a bit complicated because the cache in a modern processor is [complicated](http://15418.courses.cs.cmu.edu/15418_spr13/index.php/lecture/cachecoherence1/slide_028)[^5]. The main problem is that memory traffic on the bus is done in units of _cache lines_, which tend to be larger than 32 bytes. In order to write only 32 bytes, the cache must first _read_ the entire cache line from memory and then modify it. Unfortunately, this means that my program, which only writes values, will actually cause double the memory traffic I expect because it will cause reads of cache line! As you can see from the picture below, the bus traffic (the blue lines out of the processor) per cache line is a read and a write to memory:
 
-![Cache traffic for a partial cache line write](|filename|/../images/cache_readwrite.png "Cache traffic for a partial cache line write")
+![Cache traffic for a partial cache line write](|filename|/images/cache_readwrite.png "Cache traffic for a partial cache line write")
  
 [^5]: Ok, the answer is actually fairly complicated and I'm going to lie just a little bit to simplify things. If you're curious how a modern cache works, you should read through the [lectures](http://15418.courses.cs.cmu.edu/15418_spr13/index.php/lecture/cachecoherence1) on it.
 

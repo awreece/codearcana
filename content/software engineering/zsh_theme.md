@@ -1,5 +1,5 @@
 Title: My <tt>zsh</tt> theme
-Date: 2013-11-06
+Date: 2013-06-11
 Tags: zsh
 
 I spent some time this week switching from `bash` to `zsh` (I really enjoy
@@ -19,8 +19,8 @@ It differs from most themes in the following ways:
 First, a screenshot:
 
 
-![`zsh` theme](|filename|/../images/zsh_theme.png "My `zsh` theme")
-![`zsh` theme popup](|filename|/../images/zsh_theme_popup.png "A sample notification - click to focus on the terminal window.")
+![`zsh` theme](|filename|/images/zsh_theme.png "My `zsh` theme")
+![`zsh` theme popup](|filename|/images/zsh_theme_popup.png "A sample notification - click to focus on the terminal window.")
 
 And some more detailed explanation:
 

@@ -48,8 +48,7 @@ culprit is `GOMP_taskwait`:
 $ pprof --gv --focus=omp_get_num_procs solver out.prof
 ~~~
 
-<!-- TODO(awreece) Use the images support with newer pelican. -->
-![`omp_get_num_procs` call graph](|filename|/../images/omp_get_num_procs.png "`omp_get_num_procs` call graph")
+![`omp_get_num_procs` call graph](|filename|/images/omp_get_num_procs.png "`omp_get_num_procs` call graph")
 
 We cannot view annotated source for this function (since we don't have source),
 but we *can* look at the annotated disassembly. 
