@@ -46,7 +46,8 @@ FILES_TO_COPY = (
   ('../images/omp_get_num_procs.png', 'images/omp_get_num_procs.png'),
   ('../images/cache_readwrite.png', 'images/cache_readwrite.png'),
   ('../images/zsh_theme.png', 'images/zsh_theme.png'),
-  ('../images/zsh_theme_popup.png', 'images/zsh_theme_popup.png')
+  ('../images/zsh_theme_popup.png', 'images/zsh_theme_popup.png'),
+  ('../images/bash_perf_stack_trace.png', 'images/bash_perf_stack_trace.png'),
   # TODO(awreece) Use STATIC_PATHS.
 )
 
