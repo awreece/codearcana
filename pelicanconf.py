@@ -60,3 +60,5 @@ ARTICLE_LANG_URL =      'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}-{lang}.html'
 ARTICLE_LANG_SAVE_AS =  'posts/{date:%Y}/{date:%m}/{date:%d}/{slug}-{lang}.html'
 
 DEFAULT_PAGINATION = 10
+
+RELATIVE_URLS=True
