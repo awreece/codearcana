@@ -1,5 +1,5 @@
 Title: gdb breakpoint commands and conditional breakpoints
-Keywords: gdb, conditional breakpoint, breakpoint commands
+Tags: gdb, conditional breakpoint, breakpoint commands
 Date: 2015-05-16
  
 During my first week at my new job, I had the opportunity to teach some of my new coworkers about `gdb` breakpoint commands and conditional breakpoints. I had a lot of fun teaching these techniques my friends here and thought others might find the story enjoyable as well.
