@@ -71,6 +71,6 @@ ftp_upload: publish
 
 github: publish
 	ghp-import $(OUTPUTDIR)
-	git push git@github.com:awreece/awreece.github.com gh-pages:master
+	git push git@github.com:awreece/awreece.github.io gh-pages:master
 
 .PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github
