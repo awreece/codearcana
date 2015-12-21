@@ -64,8 +64,8 @@ The culprit was that `mmap` was contending in the kernel on the `mm->mmap_sem` l
 ![We see a lot of time is spent in rwsem_down_write_failed.](|filename|/images/mmap_off_cpu.svg "In an off-cpu flamgraph, the width of a bar is proportional to the total time spent off cpu. Here we see a lot of time is spent in rwsem_down_write_failed.")
 
 Fortunately, the fix was simple -- we switched to using the traditional file
-`read` interface. After this change, we nearly doubled our throughput became
-CPU bound as we expected:
+`read` interface. After this change, we nearly doubled our throughput
+and became CPU bound as we expected:
 
 ![Almost 100% CPU utilization](|filename|/images/high_cpu_usage.png "Almost 100% CPU utilization")
 
