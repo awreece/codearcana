@@ -59,13 +59,27 @@ I'd previously written:
     [ perf record: Captured and wrote 1.343 MB perf.data (~58684 samples) ]
     $ sudo perf script -f time,comm,pid,tid,event,ip,sym,dso,trace -i sched.data | ~/FlameGraph/stackcollapse-perf-sched.awk | ~/FlameGraph/flamegraph.pl --color=io --countname=us >off-cpu.svg
 
-The culprit was that `mmap` was contending in the kernel on the `mm->mmap_sem` lock:
+The culprit was that `mmap` was contending in the kernel on the `mm->mmap_sem` lock, causing it to take 10-20ms (almost half the latency of the query itself):
 
 ![We see a lot of time is spent in rwsem_down_write_failed.](|filename|/images/mmap_off_cpu.svg "In an off-cpu flamgraph, the width of a bar is proportional to the total time spent off cpu. Here we see a lot of time is spent in rwsem_down_write_failed.")
 
-Fortunately, the fix was simple -- we switched to using the traditional file
-`read` interface. After this change, we nearly doubled our throughput
-and became CPU bound as we expected:
+
+    ::console
+    $ sudo perf trace -emmap --pid $(pgrep memsqld | head -n 1) -- sleep 5
+    ... <snip> ...
+    12453.692 ( 9.060 ms): memsqld/55950 mmap(len: 1265444, prot: READ, flags: PRIVATE|POPULATE, fd: 65</mnt/rob/memsqlbin/data/columns/bi/4/634/12883>) = 0x7f95ece9f000
+    12453.777 ( 8.924 ms): memsqld/55956 mmap(len: 1265444, prot: READ, flags: PRIVATE|POPULATE, fd: 67</mnt/rob/memsqlbin/data/columns/bi/4/634/12883>) = 0x7f95ecbf5000
+    12456.748 (15.170 ms): memsqld/56112 mmap(len: 1265444, prot: READ, flags: PRIVATE|POPULATE, fd: 77</mnt/rob/memsqlbin/data/columns/bi/4/634/12883>) = 0x7f95ec48d000
+    12461.476 (19.846 ms): memsqld/56091 mmap(len: 1265444, prot: READ, flags: PRIVATE|POPULATE, fd: 79</mnt/rob/memsqlbin/data/columns/bi/4/634/12883>) = 0x7f95ec1e3000
+    12461.664 (12.226 ms): memsqld/55514 mmap(len: 1265444, prot: READ, flags: PRIVATE|POPULATE, fd: 84</mnt/rob/memsqlbin/data/columns/bi/4/634/12883>) = 0x7f95ebe84000
+    12461.722 (12.240 ms): memsqld/56100 mmap(len: 1265444, prot: READ, flags: PRIVATE|POPULATE, fd: 85</mnt/rob/memsqlbin/data/columns/bi/4/634/12883>) = 0x7f95ebd2f000
+    12461.761 (20.127 ms): memsqld/55522 mmap(len: 1265444, prot: READ, flags: PRIVATE|POPULATE, fd: 82</mnt/rob/memsqlbin/data/columns/bi/4/634/12883>) = 0x7f95ebfb9000
+    12463.473 (17.544 ms): memsqld/56113 mmap(len: 1265444, prot: READ, flags: PRIVATE|POPULATE, fd: 75</mnt/rob/memsqlbin/data/columns/bi/4/634/12883>) = 0x7f95eb990000
+    ... <snip> ...
+
+Fortunately, the fix was simple -- we switched from using `mmap` to using
+the traditional file `read` interface. After this change, we nearly doubled
+our throughput and became CPU bound as we expected:
 
 ![Almost 100% CPU utilization](|filename|/images/high_cpu_usage.png "Almost 100% CPU utilization")
 
