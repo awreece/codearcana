@@ -73,5 +73,6 @@ CPU bound as we expected:
 
 I'll buy a {root,}beer/beverage of choice for anyone who can help me with these
 questions:
+
   - Is there a good tool in Linux to see (in periodic updates) what % of time a thread spends in each of the various possible thread states?
   - Why do the time spent sleeping / executing mmap as recorded by by the sched probes not align with the latency of mmap calls if the mmap calls don't show in cpu stack traces? (I suspect that `mm_populate` or `rwsem_down_read_failed` does an alarming amount of work while having disabled bottom half interrupts, which is interfering with `perf`)
