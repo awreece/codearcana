@@ -61,8 +61,7 @@ I'd previously written:
 
 The culprit was that `mmap` was contending in the kernel on the `mm->mmap_sem` lock, causing it to take 10-20ms (almost half the latency of the query itself):
 
-![We see a lot of time is spent in rwsem_down_write_failed.](|filename|/images/mmap_off_cpu.svg "In an off-cpu flamgraph, the width of a bar is proportional to the total time spent off cpu. Here we see a lot of time is spent in rwsem_down_write_failed.")
-
+<object data="{filename}/images/mmap_off_cpu.svg" style="width:100%;"></object>
 
     ::console
     $ sudo perf trace -emmap --pid $(pgrep memsqld | head -n 1) -- sleep 5

@@ -31,7 +31,7 @@ build took almost 10 seconds. I noticed my system had incredibly high
 CPU utilization and generated a
 [Flame Graph](http://www.brendangregg.com/flamegraphs.html):
 
-![make using hgfs](|filename|/images/make_using_hgfs.svg "`mutex_spin_owner` is at the top of every filesystem access")
+<object data="{filename}/images/make_using_hgfs.svg" style="width:100%;"></object>
 
 I was amazed -- all the HGFS stacks were spending time blocked in
 `mutex_spin_on_owner`. It looks like all file accesses have
@@ -67,4 +67,4 @@ and mounted the directory on Linux:
 
 This cut my build times down to 1s, almost 10x faster. Here is the revised Flame Graph:
 
-![make using nfs](|filename|/images/make_using_nfs.svg "Much less time is spent when using NFS")
+<object data="{filename}/images/make_using_nfs.svg" style="width:100%;"></object>
