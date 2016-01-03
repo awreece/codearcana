@@ -1,7 +1,7 @@
 Title: Dtrace isn't just a tool; it's a philosophy
 Date: 2016-01-03
-Tags: Linux, perf_events
-Summary: I document some pain points from recent performance investigations and then speculate that such issues are endemic to Linux.
+Tags: Linux, perf_events, opinion
+Summary: I document some pain points from recent performance investigations and then speculate that such issues are endemic to the Linux community.
 
 My most recent [post]({filename}off_cpu_mmap.md) was a story about a successful performance investigation. Unfortunately, this happy post was intentionally simplified for the audience of my company's blog. The reality is that I frequently find doing performance investigations on Linux a frustrating process due to the lack of adequate tooling. In this blog post, I document some recent pain points and then speculate that such issues are endemic to Linux.
 
