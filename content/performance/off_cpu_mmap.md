@@ -48,7 +48,7 @@ state corresponding to "Uninterruptible sleep":
 At this point, I generated an
 [off-cpu flamegraph](http://www.brendangregg.com/blog/2015-02-26/linux-perf-off-cpu-flame-graph.html)
 using Linux `perf_events`, to see why were entering this state. The machine I
-was testing on was old enough that it didn't have `perf inject`, so I had to 
+was testing on was old enough that it didn't have `perf inject`, so I had to
 use an
 [`awk` script](https://github.com/awreece/FlameGraph/blob/6f3e75f10923d1f97e4b2b0a40d8ec3c9d063974/stackcollapse-perf-sched.awk)
 I'd previously written:
@@ -59,9 +59,19 @@ I'd previously written:
     [ perf record: Captured and wrote 1.343 MB perf.data (~58684 samples) ]
     $ sudo perf script -f time,comm,pid,tid,event,ip,sym,dso,trace -i sched.data | ~/FlameGraph/stackcollapse-perf-sched.awk | ~/FlameGraph/flamegraph.pl --color=io --countname=us >off-cpu.svg
 
-The culprit was that `mmap` was contending in the kernel on the `mm->mmap_sem` lock, causing it to take 10-20ms (almost half the latency of the query itself):
+_Note: recording scheduler events via `perf record` can have a very large overhead and should be used cautiously in production environments. This is why I wrap the `perf record` around a `sleep 1` to limit the duration._
 
 <object data="{filename}/images/mmap_off_cpu.svg" style="width:100%;"></object>
+
+From the repeated calls to `rwsem_down_read_failed` and `rwsem_down_write_failed`, we see that culprit was `mmap`contending in the kernel on the `mm->mmap_sem` lock:
+
+    ::c
+    down_write(&mm->mmap_sem);
+    ret = do_mmap_pgoff(file, addr, len, prot, flag, pgoff,
+                        &populate);
+    up_write(&mm->mmap_sem);
+
+This was causing every `mmap` syscall to take 10-20ms (almost half the latency of the query itself):
 
     ::console
     $ sudo perf trace -emmap --pid $(pgrep memsqld | head -n 1) -- sleep 5
