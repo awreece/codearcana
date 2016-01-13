@@ -67,6 +67,9 @@ very complicated things (e.g. stacks).
   - [`sysdig`](http://www.sysdig.org/): A glorious user interface and easy to
     install, but definitely the
     new kid on the block. Requires a custom kernel module to be installed.
+	Only traces at the syscall boundary, which is good enough for some use
+	cases, but I generally prefer more visibility into the kernel (for example,
+	to see that we're getting descheduled due to page faults, etc).
 	Doesn't have a way to filter or aggregate in-kernel events (by design) and
 	cannot collect stack traces. These developers seemed very open
 	to outside contributors and upstream their work pretty quickly, so maybe
