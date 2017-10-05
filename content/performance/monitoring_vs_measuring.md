@@ -24,7 +24,7 @@ Ultimately, our misguided moniteers missed the key to keeping their system healt
 
 ## Why did my CPU utilization spike?
 
-People who monitor the performance of their system usually start by following two poor ad-hoc methodologies. The first strategy they employ is to iterate through the performance tools they are aware of (e.g. top, iostat, etc) and hope the issue can be seen by one of them. Brendan Gregg calls this approach the “Streetlight method” after the old joke about the man who looks for his keys in the middle of the street, rather than where he lost them, because “the light is best” under the streetlight[^3]. 
+People who monitor the performance of their system usually start by following two poor ad-hoc methodologies. The first strategy they employ is to iterate through the performance tools they are aware of (e.g. top, iostat, etc) and hope the issue can be seen by one of them. Brendan Gregg calls this approach the “Streetlight method” after the old joke about the man who looks for his keys in the middle of the street, rather than where he lost them, because “the light is best” under the streetlight[^4].
 
 [^4]: For more anti-methods, check out Brendan Gregg's book [Systems Performance: Enterprise and the Cloud](https://books.google.com/books?id=xQdvAQAAQBAJ).
 
