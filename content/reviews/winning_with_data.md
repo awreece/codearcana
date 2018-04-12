@@ -21,24 +21,37 @@ When being asked to do some involved/length analysis, make sure the result would
 The use of derived measures here reminds me of the use of “risk tolerance” by the google SRE teams https://landing.google.com/sre/book/chapters/embracing-risk.html
 
 > The Z score is determined by the desired p-value / confidence interval. Let's choose an 80 percent confidence interval. The Z score is 1.28.
+>
 > The standard of deviation is measured on a scale from 0 to 1. Most people use 0.5 since it is the most forgiving value and will generate the largest sample size.
-> The margin of error is also called the confidence interval. See Figure 8.4. When a political poll says a candidate commands 19 percent of the vote +/– 5 percent, the 5 percent is the margin of error.
-$$ SampleSize = \frac{ZScore^2 * StandardOfDeviation * (1 -
+>
+> The margin of error is also called the confidence interval.
+>
+> $$ SampleSize = \frac{ZScore^2 * StandardOfDeviation * (1 -
 StandardOfDeviation)}{MarginOfError^2} $$
 
 A convenient formula to compute required sample size for a statistically
 relevant study.
  
 > Their analysis showed 10 slides is the optimal length for fundraising pitches:
-> * Company Purpose: the mission or goal of the business
-> * Problem: the complication with the status quo that creates the opportunity for the business to pursue
-> * Solution: the company's proposed idea to resolve the problem
-> * Why Now: why should this idea succeed now, when no one has succeeded with it before?
-> * Market Size: if the business were to succeed, how valuable could it be?
-> * Product: typically, a demonstration of the product or images of the technology
-> * Team: the members of the founding and executive team, often including key advisors and investors
-> * Business Model: an overview of the business' pricing strategy and unit economics.
-> * Competition: a description of the alternatives and substitutes and how the startup intends to differentiate itself
-> * Financials: a pro-forma profit and loss projection of the business. In Docsend's analysis, investors spend the most time on this slide to understand the long-term profitability of the business and the amount of capital required to sustain the company.
+>
+> *Company Purpose*: the mission or goal of the business
+>
+> *Problem*: the complication with the status quo that creates the opportunity for the business to pursue
+>
+> *Solution*: the company's proposed idea to resolve the problem
+>
+> *Why Now*: why should this idea succeed now, when no one has succeeded with it before?
+>
+> *Market Size*: if the business were to succeed, how valuable could it be?
+>
+> *Product*: typically, a demonstration of the product or images of the technology
+>
+> *Team*: the members of the founding and executive team, often including key advisors and investors
+>
+> *Business Model*: an overview of the business' pricing strategy and unit economics.
+>
+> *Competition*: a description of the alternatives and substitutes and how the startup intends to differentiate itself
+>
+> *Financials*: a pro-forma profit and loss projection of the business. In Docsend's analysis, investors spend the most time on this slide to understand the long-term profitability of the business and the amount of capital required to sustain the company.
  
 I think this list of 10 slides is likely to be good for nearly any pitch, including for internal presentation.
