@@ -1,6 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 
+try:
+  import sys
+  sys.path.append('.')
+  #
+  # Download https://github.com/getpelican/pelican-plugins to some directory
+  # and set PLUGIN_PATHS = ['path/to/that/dir'] in pelicanconf_local.py
+  #
+  from pelicanconf_local import *
+except:
+  pass
+
+PLUGINS = ['tag_cloud']
+
 AUTHOR = u'Alex Reece'
 SITENAME = u'Code Arcana'
 SITEURL = 'http://codearcana.com'
@@ -35,6 +48,7 @@ SOCIAL = (
 MENUITEMS = (
     ('Blog', SITEURL),
     ('Archives', SITEURL + "/archives.html"),
+    ('About', SITEURL + '/pages/about.html'),
 )
 
 # GITHUB_URL = 'https://github.com/awreece'
