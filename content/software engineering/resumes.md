@@ -1,6 +1,6 @@
 Title: Reading resumes
 Date: 2013-09-25
-Tags: opinion
+Tags: opinion, management, interviewing
 
 Tonight, I sat down and read through every resume in the 2013 SCS senior
 resume book. Reading resumes for a company is really interesting, because
