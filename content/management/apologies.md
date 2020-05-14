@@ -38,8 +38,7 @@ Put all together, an apology might sound like this:
    frustrated. In the future, I'll make sure to sync up with you about the
    status beforehand."
 
-But there are a lot of ways I used to accidentally screw up apologies.
-Here are some apology tips:
+But there are a lot of ways I used to accidentally screw up apologies:
 
  - _I explained 'why' I acted that way._
  
