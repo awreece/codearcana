@@ -33,10 +33,10 @@ Put all together, an apology might sound like this:
  - "I'm sorry, I was wrong to shout at you in that fight. I understand how
    that made your feel scared. In the future, I'm going to take a few deep
    breaths to calm down."
- - "I'm sorry about that meeting. I was wrong to report your status as red
-   without giving you warning; I bet it made you feel bad in front of your
-   boss. In the future, I'll try to give you a heads up so you can have
-   some time to prepared."
+ - "I'm sorry about that meeting. I was wrong to report your status as red in
+   front of your boss without discussing you first; I bet it made you feel
+   frustrated. In the future, I'll make sure to sync up with you about the
+   status beforehand."
 
 But there are a lot of ways I used to accidentally screw up apologies.
 Here are some apology tips:
