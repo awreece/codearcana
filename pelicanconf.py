@@ -35,6 +35,7 @@ SOCIAL = (
 
 MENUITEMS = (
     ('About', SITEURL + '/pages/about.html'),
+    ('Blog', SITEURL),
 )
 
 # GITHUB_URL = 'https://github.com/awreece'
