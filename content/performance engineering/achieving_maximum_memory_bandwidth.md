@@ -23,7 +23,7 @@ It is easy to compute the theoretically maximum memory bandwidth. [My laptop](ht
 To measure the memory bandwidth for a function, I wrote a simple benchmark. For each function, I access a large[^2] array of memory and compute the bandwidth by dividing by the run time[^3]. For example, if a function takes 120 milliseconds to access 1 GB of memory, I calculate the bandwidth to be [8.33 GB/s](http://www.wolframalpha.com/input/?i=1+GB+%2F+120+milliseconds+to+GB%2Fs). To try to reduce the variance and timing overhead, I repeatedly accessed our array and took the smallest time over several iterations[^6]. If you're curious, all my test code is available on [github](https://github.com/awreece/memory-bandwidth-demo).
 
 [^2]: It should be too large to fit in cache since I want to test memory throughput, not cache throughput.
-[^3]: Use a [monotonic timer](|filename|/performance/monotonic_timer.md) to avoid errors caused by the system clock.
+[^3]: Use a [monotonic timer](|filename|/performance engineering/monotonic_timer.md) to avoid errors caused by the system clock.
 [^6]: For future work, I'll probably write a kernel module in the style of [this excellent Intel white paper](http://download.intel.com/embedded/software/IA/324264.pdf).
 
 # A first attempt #
