@@ -1,4 +1,4 @@
-Title: Reading resumes
+Title: Reading intern resumes
 Date: 2013-09-25
 Tags: opinion, management, interviewing
 
