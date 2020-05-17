@@ -1,6 +1,6 @@
 Title: Why everyone fails at monitoring; and what you can do about it
 Date: 2017-10-05
-Tags: monitoring, opinion
+Tags: monitoring
 
 People monitor their systems for two main reasons: to keep their system healthy and to understand its performance. Almost everyone does both wrong, for the same reasons: they monitor so they can react to failures, rather than measuring their workload so that they can predict problems.
 

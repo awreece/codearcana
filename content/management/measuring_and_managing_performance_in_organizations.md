@@ -1,6 +1,6 @@
 Title: A review of <em>Measuring and Managing Performance in Organizations</em>
 Date: 2018-09-07
-Tags: opinion, management
+Tags: reviews, management
 Summary: The central thesis of this book is that measuring employees will necessarily incentivize their behavior and measurement systems are doomed to by dysfunctional if any critical dimension of an employees role is not measured.
 
 On the advice of another Boy Scout leader, I read [_Measuring and Managing Performance in Organizations_](https://smile.amazon.com/dp/B00DY3KQX6) by Robert Austin. 

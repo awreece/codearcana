@@ -1,6 +1,6 @@
 Title: Reading intern resumes
 Date: 2013-09-25
-Tags: opinion, management, interviewing
+Tags: interviewing, hiring
 
 Tonight, I sat down and read through every resume in the 2013 SCS senior
 resume book. Reading resumes for a company is really interesting, because

@@ -1,6 +1,6 @@
 Title: A review of <em>Drift Into Failure</em>
 Date: 2016-03-02
-Tags: opinion
+Tags: reviews
 
 On the advice of a former colleague, I recently read [_Drift into Failure: From Hunting Broken Components to Understanding Complex Systems_](http://smile.amazon.com/Drift-into-Failure-Components-Understanding-ebook/dp/B009KOKXKY) by Sidney Dekker. 
 

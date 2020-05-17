@@ -1,6 +1,6 @@
 Title: A review of <em>Winning with Data</em>
 Date: 2018-04-11
-Tags: opinion
+Tags: reviews
 
 On the advice of a former colleague, I recently read [Winning with Data: Transform Your Culture, Empower Your People, and Shape the Future](https://smile.amazon.com/Winning-Data-Transform-Culture-Empower-ebook/dp/B01G9FLALC) by Tomasz Tunguz and Frank Bien.
 

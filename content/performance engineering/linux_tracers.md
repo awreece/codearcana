@@ -1,6 +1,6 @@
 Title: An informal survey of Linux dynamic tracers
 Date: 2016-01-09
-Tags: Linux, tracing, opinion, perf_events
+Tags: Linux, tracing, perf_events
 Summary: I survey some dynamic tracers (e.g. perf, sysdig) available on Linux.
 
 I've gotten some questions about the choice of `perf` over all the other

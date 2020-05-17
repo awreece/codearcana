@@ -1,6 +1,6 @@
 Title: 5 graceful questions to avoid a toxic engineering team
 Date: 2018-04-17
-Tags: opinion, interviewing
+Tags: interviewing
 
 While interviewing at a potential company, the engineer evaluating you asks the
 obligatory "Any questions for me?". What do you ask?
