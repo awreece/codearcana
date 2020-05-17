@@ -16,7 +16,7 @@ PLUGINS = ['tag_cloud']
 
 AUTHOR = u'Alex Reece'
 SITENAME = u'Code Arcana'
-SITEURL = 'http://codearcana.com'
+SITEURL = 'https://codearcana.com'
 
 TIMEZONE = 'America/Los_Angeles'
 
