@@ -3,6 +3,8 @@ Date: 2020-05-13
 Tags: management, communication
 Summary: Some thoughts on how to give better apologies.
 
+## 4 parts of an apology
+
 I've been thinking about apologies recently. In both personal and
 professional relationships, I've found that the best apologies have the
 following 4 parts:
@@ -28,6 +30,8 @@ This format has a few subtle points in it:
  - It is relatively short, which makes it easy to remember and harder to drag
    out a potentially emotional process.
 
+## Some sample apologies
+
 Put all together, an apology might sound like this:
 
  - "I'm sorry, I was wrong to shout at you in that fight. I understand how
@@ -37,6 +41,8 @@ Put all together, an apology might sound like this:
    front of your boss without discussing you first; I bet it made you feel
    frustrated. In the future, I'll make sure to sync up with you about the
    status beforehand."
+
+## How to screw up an apology
 
 But there are a lot of ways I used to accidentally screw up apologies:
 
