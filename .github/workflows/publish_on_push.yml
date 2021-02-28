@@ -33,4 +33,6 @@ jobs:
         run: |
           # Unclear why it is necessary to install wheel.
           pip install -r requirements.txt
-          make github
+          make publish
+          ghp-import $GITHUB_WORKSPACE/output
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/awreece/awreece.github.io.git gh-pages:master
