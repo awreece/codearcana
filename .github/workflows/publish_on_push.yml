@@ -28,5 +28,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build
         run: |
+          # Unclear why it is necessary to install wheel.
+          pip install wheel
           pip install -r requirements.txt
           make publish
