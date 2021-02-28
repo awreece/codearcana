@@ -29,3 +29,4 @@ jobs:
       - name: Build
         run: |
           pip install -r requirements.txt
+          make publish
