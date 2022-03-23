@@ -4,9 +4,9 @@ Date: 2022-03-23
 
 I've thought a while about the vision for Platform orgs. In short, my opinion
 is that 
-Platform orgs should prioritize making an incredible user experience.
+Platform orgs should prioritize making an incredible user experience _that does not require special domain expertise to use_.
 Unfortunately, they frequently target making a very customizable experience at
-the expense of making an enjoyable one -- they target making AWS when they
+the expense of making one with a simple cognitie load  -- they target making AWS when they
 should make something easier than Heroku. 
 
 The net result of this focus is that
