@@ -4,12 +4,14 @@ Date: 2022-03-23
 
 I've thought a while about the vision for Platform orgs. In short, my opinion
 is that 
-Platform orgs should prioritize making an incredible user experience _that does not require special domain expertise to use_.
-Unfortunately, they frequently target making a very customizable experience at
-the expense of making one with a simple cognitie load  -- they target making AWS when they
-should make something easier than Heroku. 
+Platform orgs should prioritize making an incredible user experience _that does not require special domain expertise to use_ and allows Product teams to focus
+all their energy on the business.
+Unfortunately, Platform teams frequently target making a very customizable experience at
+the expense of making a simple one  -- they target making AWS when they
+could make something easier to understand than Heroku. 
 
-The net result of this focus is that
+The net result of this focus is that the "cognitive load" of platform tools
+can be quite high, and
 sometimes product engineers find themselves needing (and missing) systems
 domain expertise to configure and deploy their code. Eventually, these orgs 
 usually reach towards  embedded devops engineers who act as a professional 
