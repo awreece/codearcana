@@ -1,12 +1,28 @@
-Title: Ideal Platform Experience
+Title: An Ideal Platform Experience
 Tags: platform
 Date: 2022-03-23
 
-I've thought a while about the vision for Platform orgs. In short, I think
+I've thought a while about the vision for Platform orgs. In short, my opinion
+is that 
 Platform orgs should prioritize making an incredible user experience.
 Unfortunately, they frequently target making a very customizable experience at
 the expense of making an enjoyable one -- they target making AWS when they
-should make something easier than Heroku. Below is one potential vision for how
+should make something easier than Heroku. 
+
+The net result of this focus is that
+sometimes product engineers find themselves needing (and missing) systems
+domain expertise to configure and deploy their code. Eventually, these orgs 
+usually reach towards  embedded devops engineers who act as a professional 
+services org and fill 
+the gap between product engineers and tools that require too much context to
+be used by the product engineers.
+
+I believe that Platform orgs can avoid all this pain if they focus at the 
+beginning on making an incrediable developer experience and use that as their
+north star. With a sufficiently good focus on developer experience, maybe there
+is no need for pure devops?
+
+Below is an alternative potential vision for how
 to make a great platform experience.
 
 ##  Edit code
